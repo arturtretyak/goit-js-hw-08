@@ -6,10 +6,9 @@ const TIME_PLAYER = 'videoplayer-current-time';
 const iframe = document.querySelector('#vimeo-player');
 const player = new Player(iframe);
 
-// console.log(player);
+player.setCurrentTime(localStorage.getItem(TIME_PLAYER));
 
 function getTimeCode(data) {
-  console.log(data.seconds);
   localStorage.setItem(TIME_PLAYER, data.seconds);
 }
 
